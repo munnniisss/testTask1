@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>список построек</title>
+</head>
+<body>
+    <table border="1", align="center">
+        <caption align="center">таблица списка построек</caption>
+        <tr>
+            <th>номер</th>
+            <th>тип дома</th>
+            <th>компания застройщик</th>
+            <th>кварталов после строительства</th>
+        </tr>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name_building }}</td>
+                <td>{{ item.name_company }}</td>
+                <td>{{ item.quarters }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
